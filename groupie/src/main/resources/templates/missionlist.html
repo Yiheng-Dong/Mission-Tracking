@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">Mission List</h1>
+<table align="center">
+    <tr>
+        <td>ID</td>
+        <td>Content</td>
+        <td>Deadline</td>
+    </tr>
+    <tr th:each="mission : ${missionlist}">
+<!--        <th scope="row" th:text="${mission.id}"></th>-->
+        <td th:text="${mission.id}"></td>
+        <td th:text="${mission.content}"></td>
+        <td th:text="${mission.deadline}"></td>
+        <td><a th:href="@{/mission_delete/}+${mission.id}+@{&}+${mission.userid}">Delete</a></td>
+        <td><a th:href="@{/mission_edit/}+${mission.id}+@{&}+${mission.userid}">Edit</a></td>
+    </tr>
+</table>
+<p align="center"><a th:href="@{/mission_real/}+${userid}">Create new mission</a></p>
+<p align="center"><a th:href="@{/enterid}">Logout</a></p>
+</body>
+</html>

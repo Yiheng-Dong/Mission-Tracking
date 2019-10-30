@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">Welcome [[${#httpServletRequest.remoteUser}]]!</h1>
+<p align="center">Click <a th:href="@{/mission_fake}">here</a> to display a mission.</p>
+<p align="center">Click <a th:href="@{/enterid}">here</a> to see your missions.</p>
+<form th:action="@{/logout}" method="post">
+    <div align="center"><input type="submit" value="Sign Out"/></div>
+</form>
+</body>
+</html>

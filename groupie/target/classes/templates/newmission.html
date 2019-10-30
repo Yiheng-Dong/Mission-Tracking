@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">Create Mission</h1>
+<form name="" action="" method="post">
+    <table align="center">
+        <tr>
+            <th style="font-family:Arial;">Content : <input type="text" name="content"/></th>
+        </tr>
+        <tr>
+            <th style="font-family:Arial;">Deadline : <input type="date" name="deadline"/></th>
+        </tr>
+        <tr>
+            <th>
+                <input type="submit" name="submit" value="Submit" style="font-family:arial;"/>
+                <input type="reset" value="Reset" style="font-family:arial;"/>
+            </th>
+        </tr>
+    </table>
+</form>
+<form name="" action="/missionlist" method="get">
+    <p align="center"><input type="submit" name="view" value="View all missions" /></p>
+</form>
+</body>
+</html>

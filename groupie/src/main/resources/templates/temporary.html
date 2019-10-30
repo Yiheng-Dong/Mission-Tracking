@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+<!--    <meta http-equiv="refresh" content="5;url=/missionlist">-->
+    <title>Title</title>
+</head>
+<body>
+<form id="form1" name="form1" action="/missionlist" method="post">
+    <input type="text" name="username" th:value="${user.username}">
+    <input type="password" name="password" th:value="${user.password}">
+    <input type="submit" id="temp" name="submit" value="Submit">
+</form>
+<script language=javascript>
+    document.getElementById("temp").click()
+</script>
+<!--<script language='javascript'>document.location = '/enterid'</script>-->
+</body>
+</html>

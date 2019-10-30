@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">Create Mission</h1>
+<form action="#" th:action="@{/mission_fake}" th:object="${missionFake}" method="post">
+    <table align="center">
+        <tr align="center">
+            <td>Content : </td>
+            <td><input type="text" th:field="*{content}" /></td>
+            <td th:if="${#fields.hasErrors('content')}" th:error="*{content}">Content cannot be empty.</td>
+        </tr>
+        <tr align="center">
+            <td>Deadline : </td>
+            <td><input type="date" th:field="*{deadline}" /></td>
+            <td th:if="${#fields.hasErrors('deadline')}" th:error="*{deadline}">Deadline cannot be empty.</td>
+        </tr>
+    </table>
+    <table align="center">
+        <td align="center"><input type="submit" value="Submit" /></td>
+        <td align="center"><input type="reset" value="Reset" /></td>
+    </table>
+</form>
+</body>
+</html>
